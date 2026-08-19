@@ -8,16 +8,16 @@ const botaoAlterarAzul = document.getElementById("btnAlterarTextoAzul");
 
 botaoAlterarVermelho.addEventListener("click", () => {
     textoVermelho.style.color = "red";
-} );
+});
 botaoAlterarVerde.addEventListener("click", () => {
     textoVerde.style.color = "green";
-} );
+});
 botaoAlterarAzul.addEventListener("click", () => {
     textoAzul.style.color = "blue";
-} );
+});
 
 const botaoModo = document.getElementById("btnModo");
-botaoModo . addEventListener("click", () => {
+botaoModo.addEventListener("click", () => {
     if (document.body.style.background === "black") {
         document.body.style.background = "";
         document.body.style.color = "";
@@ -26,3 +26,27 @@ botaoModo . addEventListener("click", () => {
         document.body.style.color = "white";
     }
 });
+
+const textoEstilos = document.querySelectorAll('.spanTextoEstilo');
+const botaoMudaBold = document.getElementById('btnMudarBold');
+const botaoMudarItalico = document.getElementById('btnMudarItalico');
+
+botaoMudaBold.addEventListener('dblclick', () => {
+    textoEstilos.forEach(texto => {
+        texto.style.fontWeight = 'bold';
+    });
+});
+
+botaoMudarItalico.addEventListener('dblclick', () => {
+    textoEstilos.forEach(texto => {
+        texto.style.fontStyle = 'italic';
+    });
+});
+
+const numero = document.getElementById('inputNumero');
+const resultado = document.getElementById('spanResultado');
+
+
+numero.addEventListener('input', () => {
+    resultado.textContent = numero.value * 2
+})
