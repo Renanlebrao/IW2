@@ -60,3 +60,38 @@ input:focus {
     font-weight: bold;
     margin-top: 15px;
 }
+
+a {
+    color: #c084fc;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #d8b4fe;
+}
+
+table {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #241238;
+    border: 2px solid #7c3aed;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #7c3aed;
+}
+
+th {
+    background-color: #7c3aed;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #2b1742;
+}
